@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinhar</title>
+    <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+    <div class="container">
+        <p class="titulo">Digite seu nome</p>
+        <form action="/enviar" method="post" th:object="${Formulario}">
+                 <input type="text" class="area" th:field="*{temporaria}"/>
+                 <input  class="enviar" clique aqui type="submit" value="enviar"/>
+        <p> nome inverso: <span th:text="${nome}"> </span></p>
+        </form>
+    </div>
+
+</body>
+</html>
